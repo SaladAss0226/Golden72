@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".building.BuildingActivity"
+    android:background="@color/black">
+
+    <Button
+        android:id="@+id/btn_backpack"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_style02"
+        android:textColor="@color/mainColor"
+        android:text="背包"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_content_building"
+        app:layout_constraintBottom_toTopOf="@id/tv_content_building" />
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_style02"
+        android:textColor="@color/mainColor"
+        android:text="下一步"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_content_building"
+        app:layout_constraintBottom_toTopOf="@id/tv_content_building" />
+    <TextView
+        android:id="@+id/tv_content_building"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text=""
+        android:textColor="@color/mainColor"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:background="@drawable/shape_content"
+
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.15"/>
+    <TextView
+        android:id="@+id/tv_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="60sp"
+        android:text="10:00"
+        android:fontFamily="monospace"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <ImageView
+        android:id="@+id/imgv_eagal"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/eagal"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgv_bandages"
+        app:layout_constraintVertical_bias="0.65"
+        />
+    <ImageView
+        android:id="@+id/imgv_bandages"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/bandages"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+    <ImageView
+        android:id="@+id/imgv_maze"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/maze"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgv_bandages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.65"
+        />
+    <ImageView
+        android:id="@+id/imgv_girl"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/woman"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.1"
+        />
+    <ImageView
+        android:id="@+id/imgv_boy1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/man"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.35"
+        />
+
+    <FrameLayout
+        android:id="@+id/layout_you_lost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="you lost"
+            android:textSize="70sp"
+            android:textColor="@color/red"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全 員 撕 卡"
+            android:textSize="30sp"
+            android:textColor="@color/red"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/button_style03"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/imgv_item_photo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/box"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"/>
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainColor"
+            android:text="公事包"
+            android:textSize="20sp"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.15"
+            />
+        <TextView
+            android:id="@+id/tv_item_describe"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:textColor="@color/mainColor"
+            android:text="灰色陳舊的公事包"
+            android:textSize="14sp"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_name"
+            app:layout_constraintHorizontal_bias="0.5"
+            />
+        <TextView
+            android:id="@+id/tv_use_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="點擊以使用"
+            android:textSize="14sp"
+            android:textColor="@color/mainColor"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintVertical_bias="0.9"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:id="@+id/item_layout_done"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/button_style04"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:alpha="0.7"
+        android:visibility="invisible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="48sp"
+            android:textColor="@color/black"
+            android:fontFamily="monospace"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</FrameLayout>
