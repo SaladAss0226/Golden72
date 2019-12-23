@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.item_example.view.*
 class BackpackAdapter: RecyclerView.Adapter<BackpackAdapter.mViewHolder>() {
 
     companion object{
-        var unAssignList = arrayListOf<Package>()
+        var unAssignList = arrayListOf<MyPackage>()
         private var clickListener : ItemClickListener? = null
         fun setToClick(listener: ItemClickListener){
             clickListener = listener
@@ -21,7 +21,7 @@ class BackpackAdapter: RecyclerView.Adapter<BackpackAdapter.mViewHolder>() {
     }
 
     interface ItemClickListener{
-        fun toClick(item: Package)
+        fun toClick(item: MyPackage)
     }
 
 
@@ -31,11 +31,13 @@ class BackpackAdapter: RecyclerView.Adapter<BackpackAdapter.mViewHolder>() {
         val itemName = itemView.tv_item_name
         val itemDescribe = itemView.tv_item_describe
         val tvUse = itemView.tv_use_item
+        val availableUseTime = itemView.tv_available_use_time
         val itemLayout = itemView.item_layout
         val doneLayout = itemView.item_layout_done
-        fun bind(item: Package){
+        fun bind(item: MyPackage){
             itemName.text = item.itemName
             itemDescribe.text = item.describe
+            availableUseTime.text = "剩餘可用次數:${item.availableUseTime}"
             Glide.with(itemView)
                 .load(item.img)
                 .into(itemPhoto)
@@ -46,7 +48,10 @@ class BackpackAdapter: RecyclerView.Adapter<BackpackAdapter.mViewHolder>() {
                 repeatMode = ValueAnimator.RESTART
                 start()
             }
-            if(item.done) doneLayout.visibility = View.VISIBLE
+            if(item.done) {
+                doneLayout.visibility = View.VISIBLE
+                tvUse.visibility = View.GONE
+            }
         }
     }
 

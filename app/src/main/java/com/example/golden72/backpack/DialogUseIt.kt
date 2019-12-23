@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.example.golden72.R
 import kotlinx.android.synthetic.main.dialog_take_it.*
 
-class DialogUseIt(context: Context,val item: Package) : Dialog(context) {
+class DialogUseIt(context: Context,val item: MyPackage) : Dialog(context) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_take_it)

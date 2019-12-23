@@ -2,6 +2,8 @@ package com.example.golden72.desert
 
 import android.animation.ObjectAnimator
 import android.content.Intent
+import android.media.MediaPlayer
+import android.media.SoundPool
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -9,14 +11,27 @@ import android.view.View
 import com.example.golden72.building.BuildingActivity
 import com.example.golden72.R
 import com.example.golden72.backpack.BackpackActivity
-import com.example.golden72.backpack.BackpackAdapter.Companion.unAssignList
-import com.example.golden72.backpack.Package
+import com.example.golden72.backpack.MyPackage
+import com.example.golden72.publicFunction.putIn
 import kotlinx.android.synthetic.main.activity_desert.*
 import kotlinx.android.synthetic.main.dialog_take_it.*
 
 class DesertActivity : AppCompatActivity() {
 
     var countDown = 30
+    var movement = 0
+    var warning_alarm = 0
+    var sp = SoundPool.Builder().setMaxStreams(8).build()
+
+    lateinit var bgm_nervous: MediaPlayer
+
+
+    override fun onResume() {
+        super.onResume()
+        if(movement>=4) bgm_nervous.start()
+
+    }
+
 
     val zombiesComing = object : CountDownTimer(30000,1000){
         override fun onFinish() {
@@ -29,7 +44,7 @@ class DesertActivity : AppCompatActivity() {
         override fun onTick(millisUntilFinished: Long) {
             countDown -= 1
             tv_countdown.text = countDown.toString()
-            //倒數音效
+            if(countDown<=20) sp.play(warning_alarm,1.0f,1.0f,2,0,1.0f)
         }
     }
 
@@ -37,23 +52,27 @@ class DesertActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_desert)
 
-        var movement = 0
+        bgm_nervous = MediaPlayer.create(this,R.raw.nervous)     //載入音樂檔(需要時間)
 
         val dialog = DialogTakeIt(this)
+
+
+//        sp.setOnLoadCompleteListener { soundPool, sampleId, status ->
+//            initKeyListener(soundPool)
+//        }
+        warning_alarm = sp.load(this, R.raw.warning_alarm, 1)        //載入音效 參數由左至右是(context,音訊檔位置,優先級(最小為0,預設為0))
 
         imgv_box.setOnClickListener {
             tv_content_desert.setText(R.string.str_box)
             dialog.show()
             dialog.btn_accept.setOnClickListener {
-                unAssignList.add(
-                    Package(
-                        R.drawable.box,
-                        "破舊公事包",
-                        "埃及法老的子民啊，獻出心臟、佐以泉湧鮮血，解放封印在內之靈。",
-                        false
-                    )
-                )
-                imgv_box.visibility = View.GONE
+                putIn(MyPackage(
+                    R.drawable.box,
+                    "破舊公事包",
+                    resources.getString(R.string.str_box_detail),
+                    false,
+                    1
+                ),imgv_box)
                 dialog.dismiss()
             }
 
@@ -66,6 +85,7 @@ class DesertActivity : AppCompatActivity() {
         }
         btn_backpack.setOnClickListener {
             startActivity(Intent(this,BackpackActivity::class.java))
+            if(movement>=4) bgm_nervous.pause()
         }
 
         btn_movement.setOnClickListener {
@@ -84,17 +104,28 @@ class DesertActivity : AppCompatActivity() {
                     start()
                 }
                 zombiesComing.start()
+
                 //殭屍音效
+                bgm_nervous.start()
             }
             else if(movement==4){
                 movement++
                 btn_movement.text= "就這麼辦!!"
             }
-            else startActivity(Intent(this,
-                BuildingActivity::class.java))
+            else {
+                startActivity(Intent(this, BuildingActivity::class.java))
+                bgm_nervous.release()
+                zombiesComing.cancel()
+            }
 
         }
 
 
     }
+
+//    private fun initKeyListener(soundPool: SoundPool) {
+//        soundPool.play(pianoSound_c,1.0f,1.0f,2,0,1.0f)
+//    }
+
+
 }
