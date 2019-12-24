@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".room.RoomActivity"
+    android:background="@color/black">
+
+    <Button
+        android:id="@+id/btn_backpack_room"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_style02"
+        android:textColor="@color/mainColor"
+        android:text="背包"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/scrollview_content_room"
+        app:layout_constraintBottom_toTopOf="@id/scrollview_content_room" />
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_style02"
+        android:textColor="@color/mainColor"
+        android:text="下一步"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/scrollview_content_room"
+        app:layout_constraintBottom_toTopOf="@id/scrollview_content_room" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview_content_room"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_content"
+
+        android:layout_margin="15dp"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.15">
+        <TextView
+            android:id="@+id/tv_content_room"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:text=""
+            android:textColor="@color/mainColor"
+            android:textSize="18sp"
+            />
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <ImageView
+        android:id="@+id/imgv_store_room"
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:src="@drawable/door"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        />
+    <ImageView
+        android:id="@+id/imgv_library"
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:src="@drawable/door"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+    <ImageView
+        android:id="@+id/imgv_garage"
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:src="@drawable/door"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

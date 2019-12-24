@@ -9,7 +9,11 @@
         android:roundIcon="@color/black"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".backpack.BackpackActivity"></activity>
+        <activity android:name=".room.StoreRoomActivity"></activity>
+        <activity android:name=".room.LibraryActivity" />
+        <activity android:name=".room.GarageActivity" />
+        <activity android:name=".room.RoomActivity" />
+        <activity android:name=".backpack.BackpackActivity" />
         <activity android:name=".building.BuildingActivity" />
         <activity android:name=".desert.DesertActivity" />
         <activity android:name=".activity01.M01Activity" />

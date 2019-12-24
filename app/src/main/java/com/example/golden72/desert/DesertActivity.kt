@@ -18,13 +18,13 @@ import kotlinx.android.synthetic.main.dialog_take_it.*
 
 class DesertActivity : AppCompatActivity() {
 
+    lateinit var bgm_nervous: MediaPlayer
     var countDown = 30
     var movement = 0
-    var warning_alarm = 0
-    var sp = SoundPool.Builder().setMaxStreams(8).build()
-
-    lateinit var bgm_nervous: MediaPlayer
-
+    companion object{
+        var warning_alarm = 0
+        var sp = SoundPool.Builder().setMaxStreams(8).build()
+    }
 
     override fun onResume() {
         super.onResume()
@@ -52,14 +52,10 @@ class DesertActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_desert)
 
-        bgm_nervous = MediaPlayer.create(this,R.raw.nervous)     //載入音樂檔(需要時間)
+        bgm_nervous = MediaPlayer.create(this,R.raw.nervous02)     //載入音樂檔(需要時間)
 
         val dialog = DialogTakeIt(this)
 
-
-//        sp.setOnLoadCompleteListener { soundPool, sampleId, status ->
-//            initKeyListener(soundPool)
-//        }
         warning_alarm = sp.load(this, R.raw.warning_alarm, 1)        //載入音效 參數由左至右是(context,音訊檔位置,優先級(最小為0,預設為0))
 
         imgv_box.setOnClickListener {
@@ -104,8 +100,7 @@ class DesertActivity : AppCompatActivity() {
                     start()
                 }
                 zombiesComing.start()
-
-                //殭屍音效
+                //殭屍配樂
                 bgm_nervous.start()
             }
             else if(movement==4){

@@ -1,17 +1,28 @@
 <resources>
     <string name="app_name">Golden72</string>
-<!--    在沙漠中-->
+    <!--    在沙漠中-->
     <string name="str_box">一個灰色的陳舊公事包，上面似乎寫著什麼字。</string>
     <string name="str_box_detail">埃及法老的子民啊，獻出心臟、佐以泉湧鮮血，解放封印在內之靈。</string>
     <string name="str_girl">你上前仔細端詳，發現她有著東歐血統的深邃臉龐，以及九頭身的比例，粗估有185公分以上。年齡有點難以推測，畢竟歐美人長得比較早熟。</string>
     <string name="str_boy">你向男子望去，是一個非裔的老人，個子不高，體型壯碩，給人一種老當益壯的感覺。</string>
 
-<!--    在建築物內-->
+    <!--    在建築物內-->
     <string name="str_enter_maze">你們慌亂地進入了迷宮，盲目地奔跑。忽然間你們發現走入了死路。看著映入眼簾的這一幕，你們知道大事不妙。</string>
     <string name="str_eagal">一把上膛的沙漠之鷹(7發)，以及兩個彈夾。</string>
     <string name="str_bandages">三綑紗布及一小瓶酒精，急救時可以派上用場。</string>
     <string name="str_maze">這張紙是帶著大家逃離迷宮的唯一希望。</string>
     <string name="str_knife">一把不新不舊的開山刀，對付少量群眾看起來是很夠用了。</string>
     <string name="str_flash_light">一把PELICAN 7070R戰術手電筒，對於在黑暗中行動給予極大幫助。</string>
+
+    <!--    在房間內-->
+    <string name="str_room_screen">「歡迎大家加入抗戰的行列，大家都是身經百戰的玩家，相信遊戲規則大家都很熟悉了，唯一不同的是，這次各位將以自己的性命為賭注進行遊戲，若無法在時限內完成個人任務或暴露了自己的任務內容，您將成為下一隻波斯貓。當然，別忘了就算完成任務，若在72小時內找不到解藥，各位還是會變成無腦的吃人怪物。預祝各位好運。    K.H.Max」
+</string>
+<!--    儲藏室內-->
+    <string name="str_enter_store_room">房間有著微弱的燭光，撲鼻而來的是悶濕空氣的霉味與屍臭味。仔細一看，那裡有隻殭屍正專注地啃食一個赤裸女子的臉部，並沒有發現你們的進入。女子臟器被全數拖出，四肢截斷並散亂在各處。</string>
+    <string name="str_store_room">房間的正前方有一個移動式白板。白板後面的牆壁隱約寫了些什麼。房間四周堆了一些雜物，有成堆的廢棄報章雜誌、以及一些家具。 </string>
+<!--藏書室內-->
+    <string name="str_library">微弱的燭光，伴隨著帶點陳舊的書香及中世紀羊皮紙的味道。映入眼簾的是三個大書櫃，使原本就不大的房間更顯擁擠。右邊的書櫃放了一些科學及人文類書籍，左邊的書櫃放了一些雜誌與月刊。中間的書櫃放的是神話類及宗教書籍。</string>
+<!--    車庫內-->
+    <string name="str_garage">映入眼簾的是一個意料外的現代化車庫，裡面有一台悍馬車，及六加侖的桶裝汽油。</string>
 
 </resources>
