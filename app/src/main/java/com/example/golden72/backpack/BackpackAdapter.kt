@@ -38,6 +38,11 @@ class BackpackAdapter: RecyclerView.Adapter<BackpackAdapter.mViewHolder>() {
             itemName.text = item.itemName
             itemDescribe.text = item.describe
             availableUseTime.text = "剩餘可用次數:${item.availableUseTime}"
+
+            itemLayout.setOnClickListener{
+                clickListener?.toClick(item)
+            }
+
             Glide.with(itemView)
                 .load(item.img)
                 .into(itemPhoto)
@@ -52,6 +57,10 @@ class BackpackAdapter: RecyclerView.Adapter<BackpackAdapter.mViewHolder>() {
                 doneLayout.visibility = View.VISIBLE
                 tvUse.visibility = View.GONE
             }
+            else {
+                doneLayout.visibility = View.GONE
+                tvUse.visibility = View.VISIBLE
+            }
         }
     }
 
@@ -64,9 +73,7 @@ class BackpackAdapter: RecyclerView.Adapter<BackpackAdapter.mViewHolder>() {
     override fun getItemCount() = unAssignList.size
 
     override fun onBindViewHolder(holder: mViewHolder, position: Int) {
-            holder.bind(unAssignList[position])
-            holder.itemLayout.setOnClickListener{
-                clickListener?.toClick(unAssignList[position])
-            }
+        holder.bind(unAssignList[position])
+
     }
 }

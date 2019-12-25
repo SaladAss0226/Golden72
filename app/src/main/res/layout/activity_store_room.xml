@@ -17,33 +17,77 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="@id/imgv_background_store_room"
         app:layout_constraintBottom_toTopOf="@id/imgv_background_store_room" />
-    <Button
-        android:id="@+id/btn_backpack_store_room"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_style02"
-        android:textColor="@color/mainColor"
-        android:text="背包"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/imgv_background_store_room"
-        app:layout_constraintBottom_toTopOf="@id/imgv_background_store_room" />
     <ImageView
         android:id="@+id/imgv_background_store_room"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:padding="10dp"
         android:background="@drawable/shape_content"
-        android:src="@drawable/bg_store_room"
+        android:src="@drawable/bg_workshop"
 
+        android:padding="15dp"
         android:layout_margin="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.12"/>
+    <ImageView
+        android:id="@+id/imgv_search_sundries"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
 
-    <androidx.core.widget.NestedScrollView
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imgv_background_store_room"
+        />
+    <ImageView
+        android:id="@+id/imgv_search_board"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgv_background_store_room"
+        />
+    <ImageView
+        android:id="@+id/imgv_search_wall"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imgv_background_store_room"
+        />
+    <ImageView
+        android:id="@+id/imgv_houston"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_houston"
+        android:visibility="invisible"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview_content_room"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"/>
+    <ImageView
+        android:id="@+id/imgv_furniture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/question_mark"
+        android:visibility="invisible"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview_content_room"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.8"/>
+
+    <ScrollView
         android:id="@+id/scrollview_content_room"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -54,15 +98,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgv_background_store_room">
-    <TextView
-        android:id="@+id/tv_content_store_room"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:text= "@string/str_enter_store_room"
-        android:textColor="@color/mainColor"
-        android:textSize="18sp"
-        />
-    </androidx.core.widget.NestedScrollView>
+        <TextView
+            android:id="@+id/tv_content_store_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text= "@string/str_store_room"
+            android:textColor="@color/mainColor"
+            android:textSize="18sp"
+            />
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

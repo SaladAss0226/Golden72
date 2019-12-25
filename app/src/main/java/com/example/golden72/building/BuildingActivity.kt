@@ -16,7 +16,7 @@ import com.example.golden72.desert.DesertActivity
 import com.example.golden72.publicFunction.putIn
 import com.example.golden72.room.RoomActivity
 import kotlinx.android.synthetic.main.activity_building.*
-import kotlinx.android.synthetic.main.dialog_next_step.*
+import kotlinx.android.synthetic.main.dialog_only_text.*
 
 class BuildingActivity : AppCompatActivity() {
 
@@ -70,6 +70,7 @@ class BuildingActivity : AppCompatActivity() {
 
         btn_next.setOnClickListener {
             if(key =="破舊公事包"){   //公事包解鎖
+                imgv_bg_building.visibility = View.GONE
                 imgv_maze.visibility = View.VISIBLE
                 imgv_bandages.visibility = View.VISIBLE
                 imgv_eagal.visibility = View.VISIBLE
