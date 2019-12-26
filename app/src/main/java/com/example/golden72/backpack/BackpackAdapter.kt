@@ -37,7 +37,7 @@ class BackpackAdapter: RecyclerView.Adapter<BackpackAdapter.mViewHolder>() {
         fun bind(item: MyPackage){
             itemName.text = item.itemName
             itemDescribe.text = item.describe
-            availableUseTime.text = "剩餘可用次數:${item.availableUseTime}"
+            availableUseTime.text = "可用次數:${item.availableUseTime}"
 
             itemLayout.setOnClickListener{
                 clickListener?.toClick(item)

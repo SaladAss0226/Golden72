@@ -17,8 +17,8 @@
 
         <ImageView
             android:id="@+id/imgv_item_photo"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@drawable/box"
 
             app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +60,7 @@
             android:id="@+id/tv_available_use_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="剩餘可用次數:5"
+            android:text="可用次數:5"
             android:textSize="14sp"
             android:textColor="@color/white"
 

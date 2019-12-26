@@ -54,34 +54,29 @@ class DesertActivity : AppCompatActivity() {
 
         bgm_nervous = MediaPlayer.create(this,R.raw.nervous02)     //載入音樂檔(需要時間)
 
-        val dialog = DialogTakeIt(this)
-
         warning_alarm = sp.load(this, R.raw.warning_alarm, 1)        //載入音效 參數由左至右是(context,音訊檔位置,優先級(最小為0,預設為0))
 
         imgv_box.setOnClickListener {
             tv_content_desert.setText(R.string.str_box)
-            dialog.show()
-            dialog.btn_accept.setOnClickListener {
-                putIn(MyPackage(
-                    R.drawable.box,
-                    "破舊公事包",
-                    resources.getString(R.string.str_box_detail),
-                    false,
-                    1
-                ),imgv_box)
-                dialog.dismiss()
-            }
+            btn_take_it.visibility = View.VISIBLE
 
         }
         imgv_boy.setOnClickListener {
             tv_content_desert.setText(R.string.str_boy)
+            btn_take_it.visibility = View.INVISIBLE
         }
         imgv_girl.setOnClickListener {
             tv_content_desert.setText(R.string.str_girl)
+            btn_take_it.visibility = View.INVISIBLE
         }
         btn_backpack.setOnClickListener {
             startActivity(Intent(this,BackpackActivity::class.java))
             if(movement>=4) bgm_nervous.pause()
+        }
+
+        btn_take_it.setOnClickListener {
+            putIn(MyPackage(R.drawable.box, "破舊公事包", resources.getString(R.string.str_box_detail), false, 1),imgv_box)
+            btn_take_it.visibility = View.GONE
         }
 
         btn_movement.setOnClickListener {

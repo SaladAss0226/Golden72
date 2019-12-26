@@ -4,17 +4,15 @@ import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
 import com.example.golden72.R
-import kotlinx.android.synthetic.main.dialog_only_text.*
+import com.example.golden72.backpack.MyPackage
 import kotlinx.android.synthetic.main.dialog_take_it.*
-import kotlinx.android.synthetic.main.dialog_take_it.btn_cancel
-import kotlinx.android.synthetic.main.dialog_take_it.tv_are_you_sure
 
-class DialogSearch(context: Context,val text:String) : Dialog(context) {
+class DialogTakeIt(context: Context,val photo:Int) : Dialog(context) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.dialog_only_text)
+        setContentView(R.layout.dialog_take_it)
 
-        tv_are_you_sure.setText(text)
+        dialog_imgv.setImageResource(photo)
         btn_cancel.setOnClickListener { dismiss() }
 
 

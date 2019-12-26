@@ -63,14 +63,14 @@
         />
     <ImageView
         android:id="@+id/imgv_houston"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/ic_houston"
         android:visibility="invisible"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scrollview_content_room"
+        app:layout_constraintTop_toBottomOf="@id/tv_content_store_room"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.1"/>
     <ImageView
@@ -82,22 +82,11 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scrollview_content_room"
+        app:layout_constraintTop_toBottomOf="@id/tv_content_store_room"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.6"
         app:layout_constraintHorizontal_bias="0.8"/>
 
-    <ScrollView
-        android:id="@+id/scrollview_content_room"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/shape_content"
-
-        android:layout_margin="15dp"
-        android:padding="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgv_background_store_room">
         <TextView
             android:id="@+id/tv_content_store_room"
             android:layout_width="match_parent"
@@ -105,8 +94,13 @@
             android:text= "@string/str_store_room"
             android:textColor="@color/mainColor"
             android:textSize="18sp"
-            />
-    </ScrollView>
+            android:background="@drawable/shape_content"
+
+            android:layout_margin="15dp"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgv_background_store_room"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

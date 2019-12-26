@@ -9,24 +9,44 @@
         android:background="@drawable/shape_content"
         android:layout_gravity="center">
 
-        <ImageView
-            android:id="@+id/dialog_imgv"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/box"
-            android:layout_gravity="center"
-            android:layout_marginTop="-60dp"/>
-        <TextView
-            android:id="@+id/tv_are_you_sure"
-        android:layout_width="200dp"
+        <EditText
+            android:id="@+id/et_name"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-            android:text="確定放入背包嗎?"
+            android:hint="請輸入物品名稱"
+            android:textColorHint="@color/mainColor"
             android:textColor="@color/mainColor"
             android:textSize="18sp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginBottom="60dp"
+            />
+    <EditText
+        android:id="@+id/et_describe"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="請輸入物品描述"
+        android:textColorHint="@color/mainColor"
+        android:textColor="@color/mainColor"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
 
+        />
+    <EditText
+        android:id="@+id/et_available_use_time"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="請輸入可用次數"
+        android:textColorHint="@color/mainColor"
+        android:textColor="@color/mainColor"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:digits="0123456789"
+        />
         <Button
             android:id="@+id/btn_cancel"
             android:layout_width="90dp"

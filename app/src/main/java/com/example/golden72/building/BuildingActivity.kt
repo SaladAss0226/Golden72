@@ -14,6 +14,7 @@ import com.example.golden72.backpack.BackpackActivity
 import com.example.golden72.backpack.MyPackage
 import com.example.golden72.desert.DesertActivity
 import com.example.golden72.publicFunction.putIn
+import com.example.golden72.room.DialogOnlyText
 import com.example.golden72.room.RoomActivity
 import kotlinx.android.synthetic.main.activity_building.*
 import kotlinx.android.synthetic.main.dialog_only_text.*
@@ -86,7 +87,7 @@ class BuildingActivity : AppCompatActivity() {
             }
             else if(key=="還未使用迷宮平面圖") Toast.makeText(this,"你們還未使用迷宮平面圖",Toast.LENGTH_SHORT).show()
             else{
-                val dialog = DialogNextStep(this)
+                val dialog = DialogOnlyText(this,"確定要走進迷宮嗎?")
                 dialog.show()
                 dialog.btn_accept.setOnClickListener {
                     tv_content_building.setText(R.string.str_enter_maze)
