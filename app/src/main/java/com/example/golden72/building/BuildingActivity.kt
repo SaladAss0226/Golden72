@@ -103,7 +103,10 @@ class BuildingActivity : AppCompatActivity() {
             timeIsPlaying = !timeIsPlaying
         }
 
-        tv_countdown.setOnClickListener { imgv_flash_light.visibility = View.VISIBLE }
+        tv_countdown.setOnClickListener {
+            imgv_flash_light.visibility = View.VISIBLE
+            tv_countdown.isEnabled = false
+        }
 
 
         btn_backpack.setOnClickListener {
@@ -134,11 +137,11 @@ class BuildingActivity : AppCompatActivity() {
 
         btn_take_it.setOnClickListener {
             when(flag){
-                "eagal" -> putIn(MyPackage(R.drawable.eagal, "沙漠之鷹", resources.getString(R.string.str_eagal), false, 21),imgv_eagal)
-                "bandages" -> putIn(MyPackage(R.drawable.bandages, "紗布、酒精", resources.getString(R.string.str_bandages), false, 2),imgv_bandages)
-                "maze" -> putIn(MyPackage(R.drawable.maze, "迷宮平面圖", resources.getString(R.string.str_maze), false, 1),imgv_maze)
-                "knife" -> putIn(MyPackage(R.drawable.machete, "野戰開山刀", resources.getString(R.string.str_knife), false, 3),imgv_knife)
-                "flashLight" -> putIn(MyPackage(R.drawable.flash_light, "戰術手電筒", resources.getString(R.string.str_flash_light), false, 4),imgv_flash_light)
+                "eagal" -> putIn(MyPackage(R.drawable.eagal, "沙漠之鷹", resources.getString(R.string.str_eagal), false, 21,1),imgv_eagal)
+                "bandages" -> putIn(MyPackage(R.drawable.bandages, "紗布、酒精", resources.getString(R.string.str_bandages), false, 2,1),imgv_bandages)
+                "maze" -> putIn(MyPackage(R.drawable.maze, "迷宮平面圖", resources.getString(R.string.str_maze), false, 1,1),imgv_maze)
+                "knife" -> putIn(MyPackage(R.drawable.machete, "野戰開山刀", resources.getString(R.string.str_knife), false, 3,1),imgv_knife)
+                "flashLight" -> putIn(MyPackage(R.drawable.flash_light, "戰術手電筒", resources.getString(R.string.str_flash_light), false, 4,1),imgv_flash_light)
             }
         }
 

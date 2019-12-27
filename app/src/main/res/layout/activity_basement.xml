@@ -43,26 +43,76 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.12"/>
+    <ImageView
+        android:id="@+id/imgv_search_left_sundries"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/scrollview_content_room"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/shape_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imgv_background_basement"
+        />
+    <ImageView
+        android:id="@+id/imgv_search_supply_station_map"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
 
-        android:layout_margin="15dp"
-        android:padding="20dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgv_background_basement">
+        app:layout_constraintTop_toTopOf="@id/imgv_background_basement"
+        />
+    <ImageView
+        android:id="@+id/imgv_search_right_sundries"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imgv_background_basement"
+        />
+
         <TextView
             android:id="@+id/tv_content_basement"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:text= "@string/str_enter_basement"
             android:textColor="@color/mainColor"
             android:textSize="18sp"
+            android:background="@drawable/shape_content"
+
+            android:layout_margin="15dp"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgv_background_basement"
             />
-    </androidx.core.widget.NestedScrollView>
+    <ImageView
+        android:id="@+id/imgv_mos_code"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/mos_code"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_content_basement"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"/>
+
+    <ImageView
+        android:id="@+id/imgv_supply_station_map"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:src="@drawable/rocket"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_content_basement"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

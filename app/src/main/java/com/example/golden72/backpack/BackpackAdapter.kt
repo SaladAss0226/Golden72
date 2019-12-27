@@ -37,7 +37,8 @@ class BackpackAdapter: RecyclerView.Adapter<BackpackAdapter.mViewHolder>() {
         fun bind(item: MyPackage){
             itemName.text = item.itemName
             itemDescribe.text = item.describe
-            availableUseTime.text = "可用次數:${item.availableUseTime}"
+            if(item.type==1) availableUseTime.text = "可用次數:${item.availableUseTime}"
+            else availableUseTime.text = "無使用限制"
 
             itemLayout.setOnClickListener{
                 clickListener?.toClick(item)

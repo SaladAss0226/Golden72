@@ -5,5 +5,8 @@ data class MyPackage(
     val itemName:String,
     val describe:String,
     var done:Boolean,
-    var availableUseTime:Int
+    var availableUseTime:Int,
+    var type:Int
 )
+
+//type=1是有限制使用次數 type2為無限使用

@@ -21,7 +21,7 @@ class GarageActivity : AppCompatActivity() {
                 val dialog = DialogOnlyText(this,"確定要啟程離開這裡嗎?")
                 dialog.show()
                 dialog.btn_accept.setOnClickListener {
-                    putIn(MyPackage(R.drawable.chevrolet, "雪弗蘭Suburban","一輛越野性能卓越的SUV(高速油耗0.102L/km)", false, 99),imgv_chevrlet)
+                    putIn(MyPackage(R.drawable.chevrolet, "雪弗蘭Suburban","一輛越野性能卓越的SUV(高速油耗0.102L/km)", false, 99,2),imgv_chevrlet)
 
                     //啟程!!
                     //startActivity(Intent())

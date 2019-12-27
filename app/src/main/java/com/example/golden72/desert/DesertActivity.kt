@@ -75,7 +75,7 @@ class DesertActivity : AppCompatActivity() {
         }
 
         btn_take_it.setOnClickListener {
-            putIn(MyPackage(R.drawable.box, "破舊公事包", resources.getString(R.string.str_box_detail), false, 1),imgv_box)
+            putIn(MyPackage(R.drawable.box, "破舊公事包", resources.getString(R.string.str_box_detail), false, 1,1),imgv_box)
             btn_take_it.visibility = View.GONE
         }
 

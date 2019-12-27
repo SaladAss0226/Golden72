@@ -54,7 +54,7 @@ class StoreRoomActivity : AppCompatActivity() {
             val dialog = DialogEditText(this)
             dialog.show()
             dialog.btn_accept.setOnClickListener {
-                unAssignList.add(MyPackage(R.drawable.question_mark,dialog.et_name.text.toString(),dialog.et_describe.text.toString(),false,dialog.et_available_use_time.text.toString().toInt()))
+                unAssignList.add(MyPackage(R.drawable.question_mark,dialog.et_name.text.toString(),dialog.et_describe.text.toString(),false,dialog.et_available_use_time.text.toString().toInt(),1))
                 dialog.dismiss()
             }
         }
@@ -62,7 +62,7 @@ class StoreRoomActivity : AppCompatActivity() {
             val dialog = DialogTakeIt(this,R.drawable.ic_houston)
             dialog.show()
             dialog.btn_accept.setOnClickListener {
-                putIn(MyPackage(R.drawable.ic_houston, "不知名的地圖","應該是某種線索", false, 1),imgv_houston)
+                putIn(MyPackage(R.drawable.ic_houston, "不知名的地圖","應該是某種線索", false, 999,2),imgv_houston)
                 dialog.dismiss()
             }
         }

@@ -49,7 +49,7 @@ class LibraryActivity : AppCompatActivity() {
             val dialog = DialogTakeIt(this,R.drawable.usa_map)
             dialog.show()
             dialog.btn_accept.setOnClickListener {
-                putIn(MyPackage(R.drawable.usa_map, "美國地圖","一張美國行政區地圖。", false, 99),imgv_usa_map)
+                putIn(MyPackage(R.drawable.usa_map, "美國地圖","一張美國行政區地圖。", false, 999,2),imgv_usa_map)
                 dialog.dismiss()
             }
         }
