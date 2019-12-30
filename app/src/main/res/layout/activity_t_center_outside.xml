@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".toyotaCenter.TCenterOutsideActivity"
+    android:background="@color/black">
+    <Button
+        android:id="@+id/btn_backpack_tcenter_outside"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_style02"
+        android:textColor="@color/mainColor"
+        android:text="背包"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/imgv_background_toyota_center_outside"
+        app:layout_constraintBottom_toTopOf="@id/imgv_background_toyota_center_outside" />
+    <Button
+        android:id="@+id/btn_leave"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_style02"
+        android:textColor="@color/mainColor"
+        android:text="離開這裡"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imgv_background_toyota_center_outside"
+        app:layout_constraintBottom_toTopOf="@id/imgv_background_toyota_center_outside" />
+
+    <ImageView
+        android:id="@+id/imgv_background_toyota_center_outside"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_content"
+        android:src="@drawable/toyota_center_outside"
+        android:padding="15dp"
+        android:scaleType="fitXY"
+        android:layout_margin="15dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.12"/>
+
+    <ImageView
+        android:id="@+id/imgv_seach_wall_toyota_outside"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="160dp"
+        app:layout_constraintTop_toTopOf="@id/imgv_background_toyota_center_outside"
+        app:layout_constraintBottom_toBottomOf="@id/imgv_background_toyota_center_outside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+        android:id="@+id/imgv_enter_toyota_outside"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        app:layout_constraintTop_toTopOf="@id/imgv_background_toyota_center_outside"
+        app:layout_constraintBottom_toBottomOf="@id/imgv_background_toyota_center_outside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_content_toyota_center_outside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mainColor"
+        android:textSize="18sp"
+        android:background="@drawable/shape_content"
+
+        android:layout_margin="15dp"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgv_background_toyota_center_outside"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

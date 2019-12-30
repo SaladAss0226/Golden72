@@ -29,6 +29,7 @@ class StoreRoomActivity : AppCompatActivity() {
                 imgv_furniture.visibility = View.VISIBLE
                 dialog.dismiss()
             }
+            imgv_search_sundries.isEnabled = false
 
         }
         imgv_search_board.setOnClickListener {
@@ -39,6 +40,7 @@ class StoreRoomActivity : AppCompatActivity() {
                 tv_content_store_room.setText(R.string.str_houston)
                 dialog.dismiss()
             }
+            imgv_search_board.isEnabled = false
         }
         imgv_search_wall.setOnClickListener {
             val dialog = DialogOnlyText(this,"確定要查看牆壁嗎?")
@@ -47,6 +49,7 @@ class StoreRoomActivity : AppCompatActivity() {
                 tv_content_store_room.setText(R.string.str_blood_words)
                 dialog.dismiss()
             }
+            imgv_search_wall.isEnabled = false
         }
 
         imgv_furniture.setOnClickListener {

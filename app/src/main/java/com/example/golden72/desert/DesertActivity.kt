@@ -106,6 +106,8 @@ class DesertActivity : AppCompatActivity() {
                 startActivity(Intent(this, BuildingActivity::class.java))
                 bgm_nervous.release()
                 zombiesComing.cancel()
+                btn_movement.isEnabled = false
+
             }
 
         }

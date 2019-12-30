@@ -74,7 +74,7 @@ class BuildingActivity : AppCompatActivity() {
                 imgv_bg_building.visibility = View.GONE
                 imgv_maze.visibility = View.VISIBLE
                 imgv_bandages.visibility = View.VISIBLE
-                imgv_eagal.visibility = View.VISIBLE
+                imgv_m9.visibility = View.VISIBLE
                 imgv_knife.visibility = View.VISIBLE
                 btn_take_it.visibility = View.VISIBLE
                 btn_next.setText("逃離迷宮")
@@ -84,6 +84,7 @@ class BuildingActivity : AppCompatActivity() {
                 startActivity(Intent(this,RoomActivity::class.java))
                 bgm_building.release()
                 escapeTime.cancel()
+                btn_next.isEnabled = false
             }
             else if(key=="還未使用迷宮平面圖") Toast.makeText(this,"你們還未使用迷宮平面圖",Toast.LENGTH_SHORT).show()
             else{
@@ -114,9 +115,9 @@ class BuildingActivity : AppCompatActivity() {
             bgm_building.pause()
         }
 
-        imgv_eagal.setOnClickListener {
-            tv_content_building.text = resources.getString(R.string.str_eagal)
-            flag = "eagal"
+        imgv_m9.setOnClickListener {
+            tv_content_building.text = resources.getString(R.string.str_m9)
+            flag = "m9"
         }
         imgv_bandages.setOnClickListener {
             tv_content_building.text = resources.getString(R.string.str_bandages)
@@ -137,7 +138,7 @@ class BuildingActivity : AppCompatActivity() {
 
         btn_take_it.setOnClickListener {
             when(flag){
-                "eagal" -> putIn(MyPackage(R.drawable.eagal, "沙漠之鷹", resources.getString(R.string.str_eagal), false, 21,1),imgv_eagal)
+                "m9" -> putIn(MyPackage(R.drawable.ic_m9, "貝瑞塔M9", resources.getString(R.string.str_m9), false, 15,1),imgv_m9)
                 "bandages" -> putIn(MyPackage(R.drawable.bandages, "紗布、酒精", resources.getString(R.string.str_bandages), false, 2,1),imgv_bandages)
                 "maze" -> putIn(MyPackage(R.drawable.maze, "迷宮平面圖", resources.getString(R.string.str_maze), false, 1,1),imgv_maze)
                 "knife" -> putIn(MyPackage(R.drawable.machete, "野戰開山刀", resources.getString(R.string.str_knife), false, 3,1),imgv_knife)

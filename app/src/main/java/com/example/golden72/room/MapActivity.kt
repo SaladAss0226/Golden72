@@ -1,8 +1,8 @@
 package com.example.golden72.room
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.golden72.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -11,8 +11,8 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.model.PolylineOptions
 import kotlinx.android.synthetic.main.activity_map.*
+import kotlinx.android.synthetic.main.dialog_edit_text_map.*
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -45,6 +45,34 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        btn_location.setOnClickListener {
+            val dialog = DialogEditTextMap(this,"請輸入欲查詢地點")
+            dialog.show()
+            dialog.btn_accept.setOnClickListener {
+                if(dialog.dialog_edittext.text.length>0){
+                    if(dialog.dialog_edittext.text.toString()=="Houston Rockets"){
+                        val place = LatLng(29.750820, -95.362111)
+                        moveMap(place)
+                        addMarker(place, "Toyota Center- Houston Rockets", "休士頓火箭隊主場館豐田中心")
+                    }
+                    else if(dialog.dialog_edittext.text.toString()=="X"){
+                        val place = LatLng(43.182047, -99.290195)
+                        moveMap(place)
+                        addMarker(place, "地點X", "J.C.Williams")
+                    }
+                    else Toast.makeText(this,"查無結果",Toast.LENGTH_SHORT).show()
+                }
+                else Toast.makeText(this,"請輸入查詢地點",Toast.LENGTH_SHORT).show()
+
+                dialog.dismiss()
+            }
+        }
+
+
+
+
+
     }
 
     /**

@@ -3,12 +3,12 @@
     <!--    在沙漠中-->
     <string name="str_box">一個灰色的陳舊公事包，上面似乎寫著什麼字。</string>
     <string name="str_box_detail">埃及法老的子民啊，獻出心臟、佐以泉湧鮮血，解放封印在內之靈。</string>
-    <string name="str_girl">你上前仔細端詳，發現她有著東歐血統的深邃臉龐，以及九頭身的比例，粗估有185公分以上。年齡有點難以推測，畢竟歐美人長得比較早熟。</string>
+    <string name="str_girl">她有著東歐血統的深邃五官，以及亞洲面孔散發的稚氣，可能是一位歐亞混血女孩，而年齡應該和你們相去不遠。身高大概170公分左右。</string>
     <string name="str_boy">你向男子望去，是一個非裔的老人，個子不高，體型壯碩，給人一種老當益壯的感覺。</string>
 
     <!--    在建築物內-->
     <string name="str_enter_maze">你們慌亂地進入了迷宮，盲目地奔跑。忽然間你們發現走入了死路。看著映入眼簾的這一幕，你們知道大事不妙。</string>
-    <string name="str_eagal">一把上膛的沙漠之鷹(7發)，以及兩個彈夾。</string>
+    <string name="str_m9">一把上膛的貝瑞塔M9，15發。</string>
     <string name="str_bandages">三綑紗布及一小瓶酒精，急救時可以派上用場。</string>
     <string name="str_maze">這張紙是帶著大家逃離迷宮的唯一希望。</string>
     <string name="str_knife">一把不新不舊的開山刀，對付少量群眾看起來是很夠用了。</string>
@@ -33,10 +33,24 @@
 
     <!--    車庫內-->
     <string name="str_garage">映入眼簾的是一個意料外的現代化車庫，裡面有一輛17年的雪弗蘭Suburban(高速油耗0.102L/km)，及20加侖的桶裝汽油。</string>
+    <string name="str_gas_42">一桶42加侖的汽油。</string>
+    <string name="str_car">一輛越野性能卓越的SUV(高速油耗0.102L/km)</string>
     <!--    地下室內-->
     <string name="str_enter_basement">樓梯的盡頭是一個看起來很久沒使用的工具間，充斥著各式各樣的工具，板手、鐵鎚、鋁棍、電鋸......你想得到的都有，簡直是間五金行。最裡面的牆上則掛了一幅與房間格格不入的怪異地圖。</string>
-    <string name="str_newspaper">\t\t\t\t\t\t\t\t\t\t\t\t\t【地表最強手遊!!】\n「眾所皆知的射擊/解謎遊戲「黃金72」經歷了306事件後依然屹立不搖，而且就在今天首次達到了7億的下載次數，成為蟬聯play商店第三年熱銷榜冠軍，製作公司董事長K.H.Max在媒體訪問中向粉絲們宣布今天午夜將進行遊戲的更新維護，因為隔天中午12:00將舉辦全球性的盛大活動任務，也歡迎還沒下載遊戲的朋友們趕快加入遊戲一同來共襄盛舉。製作公司執行長J.C.Williams則有不同看法，表示伺服器及系統的維護需要更多時間來調整，否則無法負荷大量玩家同時登入…..」</string>
+    <string name="str_newspaper">\t\t\t\t\t\t\t\t\t\t\t\t【地表最強手遊!!】\n「眾所皆知的射擊/解謎遊戲「黃金72」經歷了306事件後依然屹立不搖，而且就在今天首次達到了7億的下載次數，成為蟬聯play商店第三年熱銷榜冠軍，製作公司董事長K.H.Max在媒體訪問中向粉絲們宣布今天午夜將進行遊戲的更新維護，因為隔天中午12:00將舉辦全球性的盛大活動任務，也歡迎還沒下載遊戲的朋友們趕快加入遊戲一同來共襄盛舉。製作公司執行長J.C.Williams則有不同看法，表示伺服器及系統的維護需要更多時間來調整，否則無法負荷大量玩家同時登入…..」</string>
     <string name="str_mos_code">一張摩斯電碼表，雖然不太確定但你們似乎想起一些關聯。</string>
     <string name="str_supply_station_map">上面註明了補給站位置以及一些重要標示。你們知道這張地圖非常重要。</string>
+
+    <!--    在補給站-->
+    <string name="str_eagal">一把上膛的沙漠之鷹，7發。</string>
+    <string name="str_ak47">一把AK-47突擊步槍，30發。</string>
+    <string name="str_c4">一顆手榴彈。</string>
+    <string name="str_gas">5加侖汽油。</string>
+    <!--    在通訊站-->
+    <string name="str_earthquake">\t\t\t\t\t\t\t\t\t【Breaking News】\n根據國家地震信息中心(NEIC)資料顯示，紐約市政廳北北東5.2英哩處發生芮氏規模11.4的極淺源地震，地震深度僅5公里，幾乎位於震央的紐約中央車站最大震度達到Mercalli 11級，曼哈頓附近的帝國大廈與自由女神像經過確認已經倒塌。請附近民眾遵從軍隊指揮立即往西撤離。</string>
+
+    <!--    在豐田中心外面-->
+    <string name="str_wall_toyota_outside">別再上同樣的當。快來找我。</string>
+
 
 </resources>

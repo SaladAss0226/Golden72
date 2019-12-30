@@ -2,6 +2,7 @@ package com.example.golden72.room
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
+import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
@@ -13,9 +14,11 @@ import kotlinx.android.synthetic.main.activity_room.*
 
 class RoomActivity : AppCompatActivity() {
 
-    lateinit var bgm_room: MediaPlayer
-    var musicFlag = false
+    companion object{
+        lateinit var bgm_room: MediaPlayer
+    }
 
+    var musicFlag = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.golden72">
-
-    <!--允許程式使用網路權限-->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <!--允許程式存取粗略位置-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <!--允許程式存取精確位置-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 允許程式使用網路權限 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允許程式存取粗略位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 允許程式存取精確位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,16 +13,22 @@
         android:roundIcon="@color/black"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--目標版本為28以上就要設定apache-->
-        <uses-library android:name="org.apache.http.legacy"
-            android:required="false"/>
-
-        <!--meta data放入在google API console取得的API金鑰-->
+        <activity android:name=".williamsPlace.WillamsPlaceActivity"></activity>
+        <activity android:name=".onTheWay.ToWilliamsActivity" />
+        <activity android:name=".onTheWay.ToWilliams" />
+        <activity android:name=".toyotaCenter.TCenterInsideActivity" />
+        <activity android:name=".toyotaCenter.TCenterOutsideActivity" />
+        <activity android:name=".onTheWay.ContactActivity" />
+        <activity android:name=".onTheWay.SupplyActivity" />
+        <activity android:name=".onTheWay.ToHoustonActivity" /> <!-- 目標版本為28以上就要設定apache -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- meta data放入在google API console取得的API金鑰 -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA3YWplfsR7BvQFTkX4J8vk8BQUEEirVnI"/>
+            android:value="AIzaSyA3YWplfsR7BvQFTkX4J8vk8BQUEEirVnI" />
 
-        <activity android:name=".room.MapActivity"></activity>
+        <activity android:name=".room.MapActivity" />
         <activity android:name=".room.BasementActivity" />
         <activity android:name=".room.StoreRoomActivity" />
         <activity android:name=".room.LibraryActivity" />

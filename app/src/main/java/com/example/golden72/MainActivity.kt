@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.golden72.desert.DesertActivity
+import com.example.golden72.room.GarageActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,
                 DesertActivity::class.java))
 
+        }
+
+        btn_work.setOnClickListener {
+            startActivity(Intent(this,GarageActivity::class.java))
         }
     }
 }

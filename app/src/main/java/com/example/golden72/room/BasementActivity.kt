@@ -24,6 +24,7 @@ class BasementActivity : AppCompatActivity() {
                 tv_content_basement.setText(R.string.str_newspaper)
                 dialog.dismiss()
             }
+            imgv_search_left_sundries.isEnabled = false
         }
         imgv_search_right_sundries.setOnClickListener {
             val dialog = DialogOnlyText(this,"確定要搜索右側三層櫃嗎?")
@@ -33,6 +34,7 @@ class BasementActivity : AppCompatActivity() {
                 imgv_mos_code.visibility = View.VISIBLE
                 dialog.dismiss()
             }
+            imgv_search_right_sundries.isEnabled = false
         }
 
         imgv_search_supply_station_map.setOnClickListener {
@@ -43,6 +45,7 @@ class BasementActivity : AppCompatActivity() {
                 imgv_supply_station_map.visibility = View.VISIBLE
                 dialog.dismiss()
             }
+            imgv_search_supply_station_map.isEnabled = false
         }
 
         imgv_mos_code.setOnClickListener {

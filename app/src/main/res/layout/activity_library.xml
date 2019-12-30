@@ -36,8 +36,9 @@
         android:background="@drawable/shape_content"
         android:src="@drawable/bg_library"
         android:padding="15dp"
-
         android:layout_margin="15dp"
+        android:scaleType="fitXY"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,11 +46,11 @@
         app:layout_constraintVertical_bias="0.12"/>
     <ImageView
         android:id="@+id/imgv_search_left_bookcase"
-        android:layout_width="80dp"
+        android:layout_width="100dp"
         android:layout_height="190dp"
 
         android:layout_marginBottom="15dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/imgv_background"
         />
@@ -65,11 +66,11 @@
         />
     <ImageView
         android:id="@+id/imgv_search_right_bookcase"
-        android:layout_width="80dp"
+        android:layout_width="100dp"
         android:layout_height="190dp"
 
         android:layout_marginBottom="15dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/imgv_background"
         />

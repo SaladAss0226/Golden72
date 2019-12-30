@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onTheWay.ContactActivity"
+    android:background="@color/black">
+
+    <Button
+        android:id="@+id/btn_backpack_contact"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_style02"
+        android:textColor="@color/mainColor"
+        android:text="背包"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/imgv_background_contact"
+        app:layout_constraintBottom_toTopOf="@id/imgv_background_contact" />
+
+    <ImageView
+        android:id="@+id/imgv_background_contact"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/shape_content"
+        android:src="@drawable/electric_tower"
+        android:padding="15dp"
+        android:scaleType="fitXY"
+        android:layout_margin="15dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.12"/>
+
+    <TextView
+        android:id="@+id/tv_content_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mainColor"
+        android:textSize="18sp"
+        android:background="@drawable/shape_content"
+
+        android:layout_margin="15dp"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgv_background_contact"
+        />
+    <TextView
+        android:id="@+id/tv_next_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Next"
+        android:textColor="@color/white"
+
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+    <ImageView
+        android:id="@+id/imgv_arrow_forward"
+        android:layout_width="32dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_arrow_right"
+
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/tv_next_contact"
+        app:layout_constraintBottom_toBottomOf="@id/tv_next_contact"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

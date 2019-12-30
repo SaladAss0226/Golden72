@@ -24,6 +24,7 @@ class LibraryActivity : AppCompatActivity() {
                 tv_content_library.setText(R.string.str_magazine)
                 dialog.dismiss()
             }
+            imgv_search_left_bookcase.isEnabled = false
         }
 
         imgv_search_center_bookcase.setOnClickListener {
@@ -34,6 +35,7 @@ class LibraryActivity : AppCompatActivity() {
                 imgv_usa_map.visibility = View.VISIBLE
                 dialog.dismiss()
             }
+            imgv_search_center_bookcase.isEnabled = false
         }
 
         imgv_search_right_bookcase.setOnClickListener {
@@ -43,6 +45,7 @@ class LibraryActivity : AppCompatActivity() {
                 tv_content_library.setText(R.string.str_you_lose)
                 dialog.dismiss()
             }
+            imgv_search_right_bookcase.isEnabled = false
         }
 
         imgv_usa_map.setOnClickListener {
